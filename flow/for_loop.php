@@ -41,7 +41,7 @@ $n=60;
 // ceil 天花板
 $limit=ceil($n/11);
 // floor 樓地板
-$limit=floor($n/11); 
+// $limit=floor($n/11); 
 
 for($i=10;$i<=($limit);$i++){
     // echo '$i=' . $i . "=>";
