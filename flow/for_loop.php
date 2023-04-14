@@ -41,11 +41,21 @@ $n=60;
 // ceil 天花板
 $limit=ceil($n/11);
 // floor 樓地板
-// $limit=floor(); 
+$limit=floor($n/11); 
 
 for($i=10;$i<=($limit);$i++){
     // echo '$i=' . $i . "=>";
     echo $i*2-1;
+    echo ",";
+}
+echo "<hr>";
+
+
+echo "i*11-1計算";
+echo "<br>";
+for($i=0;$i<=10;$i++){
+    // echo '$i=' . $i . "=>";
+    echo $i*10;
     echo ",";
 }
 echo "<hr>";
