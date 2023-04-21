@@ -72,9 +72,9 @@ $times=ceil(count($a)/2); //計算反轉次數
 $maxIndex=count($a)-1;  //計算陣列中最大索引值
 
 for($i=0;$i<$times;$i++){
-    $tmp=$a[$i];
-    $a[$i]=$a[$maxIndex-$i];
-    $a[$maxIndex-$i]=$tmp;
+    $tmp=$a[$i]; //先將$a[$i]指派給$tmp暫存變數
+    $a[$i]=$a[$maxIndex-$i]; //陣列索引數值交換指派
+    $a[$maxIndex-$i]=$tmp;  //最後將$tmp暫存變數存回交換後的索引
 }
 
 echo "<pre>";
