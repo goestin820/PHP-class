@@ -50,12 +50,13 @@ echo "<hr>";
 // $now = strtotime(date("Y-m-d"));
 // date_default_timezone_set("Asia/Taipei");
 
+// $now = strtotime("now");
 $now = strtotime(date("Y-m-d"));
 $birthday = strtotime("2023-8-20");
-//echo "<br>";
-//echo $now;
-//echo "<br>";
-//echo $birthday;
+echo "<br>";
+echo $now;
+echo "<br>";
+echo $birthday;
 
 $days = ($birthday - $now) / (24 * 60 * 60);
 
@@ -75,7 +76,7 @@ echo "<hr>";
 </ul>
 <?php
 $today = strtotime('now');
-echo "<br>";
+
 echo date("Y/m/d");
 echo "<br>";
 // echo date("m月d日 l");
@@ -85,6 +86,7 @@ echo date("Y-n-j G:") . (int)date("i") . ":" . (int)date("s");
 echo "<br>";
 echo date("Y-m-d H:i:s");
 echo "<br>";
+
 echo "今天是西元" . date("Y年n月j日");
 echo date("N") >= 6 ? "是假日" : "是工作日";
 ?>
@@ -98,8 +100,14 @@ $gap = $week - 1;
 // echo $gap;
 // echo "<br>";
 // $monday=date("Y-m-d l",strtotime("$gap days"),$today);
-$seconds = strtotime("+$gap days", $today);
+$seconds = strtotime("$gap days", $today);
+echo '$seconds:'.$seconds;
+echo "<br>";
+
 $monday = date("Y-m-d l", $seconds);
+echo '$mondays:'.$monday;
+echo "<br>";
+echo "<br>";
 
 for ($i = 0; $i < 5; $i++) {
     echo date("Y-m-d l", strtotime("+$i week", $seconds));
