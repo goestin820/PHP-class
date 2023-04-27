@@ -82,7 +82,7 @@ if ($month == 12) {
     <?php
     for ($i = 0; $i < count($days); $i++) {
         $today = date("Y-n-j");
-        $d = ($days[$i] != '&nbsp;') ? explode('-', $days[$i])[2] : '&nbsp;';
+        $d = ($days[$i] != '&nbsp;') ? explode('-', $days[$i])[2] : '&nbsp;'; //explode ( $delimiter , $string)[索引2]
 
         if ($today == $days[$i]) {
             if (isset($holiday[$days[$i]])) {
